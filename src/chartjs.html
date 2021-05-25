@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.3.0/chart.min.js" integrity="sha512-yadYcDSJyQExcKhjKSQOkBKy2BLDoW6WnnGXCAkCoRlpHGpYuVuBqGObf3g/TdB86sSbss1AOP4YlGSb6EKQPg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="chartjs.js"></script>
+    <title>Prueba ChartJS</title>
+</head>
+<body>
+    <div>
+        <h1>Gráficos ChartJS</h1>
+        <button type="button" id="line" onclick="graficoLinea()">Linea</button>
+        <button type="button" id="bar" onclick="graficoBarra()">Barra</button>
+        <button type="button" id="radar" onclick="graficoRadar()">Radar</button>
+        <button type="button" id="donut" onclick="graficoTartaDoughnutPolar('doughnut')">Donut</button>
+        <button type="button" id="pie" onclick="graficoTartaDoughnutPolar()">Tarta</button>
+        <button type="button" id="polar" onclick="graficoTartaDoughnutPolar('polarArea')">Polar</button>
+        <button type="button" id="options" onclick="graficoOptions()">Options</button>
+    </div>
+
+    <div style="max-width:600px;max-height: 600px">
+        <canvas id="canvas" width="400" height="400"></canvas>
+    </div>
+
+    <div>
+        <button type="button" id="addData" onclick="addData()">Añadir dato</button>
+        <button type="button" id="addDataset" onclick="addDataset()">Añadir dataset</button>
+        <button type="button" id="randomData" onclick="randomData()">Aleatorizar datos</button>
+    </div>
+
+</body>
+</html>
