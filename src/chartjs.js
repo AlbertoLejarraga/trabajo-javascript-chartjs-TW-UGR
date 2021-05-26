@@ -75,13 +75,12 @@ function graficoLinea(){
     //se generan los datos
     let data = {}
     //etiquetas en x
-    data["labels"] = obtenerEtiquetas();
+    data["labels"] = obtenerEtiquetas();//["a", "b", "c", ...]
     data["datasets"] = [{
         label: "Dataset 1",
-        data: listaNumerosRandom(varsX),
-        fill: false,
-        borderColor: colorRandom()
-    }]
+        data: listaNumerosRandom(varsX),//[2,5,6,8,6,9,8]
+        borderColor: colorRandom()//rgb(25,23,56)
+    }];
     dibujarGrafico("line", data);
     tipoChart = "line";
 
@@ -99,7 +98,7 @@ function graficoBarra(){
     for (let i=0;i<varsX;i++){
         let color = colorRandom();
         listBorder.push(color);
-        listBack.push(color.substr(0,color.length-1) + ', 0.2)');
+        listBack.push(color.substr(0,color.length-1) + ', 0.2)');//rgb(25,23,56,0.2)
     }
     data["datasets"] = [{
         label: "Dataset 1",
